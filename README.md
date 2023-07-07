@@ -10,6 +10,8 @@
     - 暂存区位于 .git目录下的index文件中
 - git add 将未跟踪文件进行跟踪
 - git commit 将暂存区文件放入本地仓库
+- git push 提交到远程仓库
+  - 两边都修改，然后push，后push的会覆盖前push
 - git pull 拉取远程代码并合并
   - 相当于 git fetch + git merge 
   - 如果自己代码有修改，拉取远程仓库代码，则终止
