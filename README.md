@@ -11,7 +11,8 @@
 - git add 将未跟踪文件进行跟踪
 - git commit 将暂存区文件放入本地仓库
 - git push 提交到远程仓库
-  - 两边都修改，然后push，后push的会覆盖前push
+  - 两边都修改，然后push，后面push会失败
+  - 这是因为git的push是使用了本地仓库的commit记录去添加的，如果远端仓库没有改本地commit则失败
 - git pull 拉取远程代码并合并
   - 相当于 git fetch + git merge 
   - 如果自己代码有修改，拉取远程仓库代码，则终止
