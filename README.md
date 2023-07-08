@@ -23,3 +23,4 @@
   - git branch xxx  创建新分支
   - git checkout xxx  切换分支
   - git checkout -b xxx 合并上面两个操作
+  - git checkout -d xxx 删除分支（当前Head不能指向被删除分支）
