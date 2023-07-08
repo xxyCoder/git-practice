@@ -24,3 +24,4 @@
   - git checkout xxx  切换分支
   - git checkout -b xxx 合并上面两个操作
   - git checkout -d xxx 删除分支（当前Head不能指向被删除分支）
+  - git checkout -D xxx 强制删除，无论有无未push的代码
