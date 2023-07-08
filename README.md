@@ -23,5 +23,8 @@
   - git branch xxx  创建新分支
   - git checkout xxx  切换分支
   - git checkout -b xxx 合并上面两个操作
-  - git checkout -d xxx 删除分支（当前Head不能指向被删除分支）
-  - git checkout -D xxx 强制删除，无论有无未push的代码
+  - git branch -d xxx 删除分支（当前Head不能指向被删除分支）
+  - git branch -D xxx 强制删除，无论有无未push的代码
+    - 删除分支也只是删除引用commit的指针，不过一个commit不在任何一个branch的路径上，在一定时间之后会被git回收
+
+- git merge xxx 合并某个commit到当前commit中
