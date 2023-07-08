@@ -16,3 +16,6 @@
 - git pull 拉取远程代码并合并
   - 相当于 git fetch + git merge 
   - 如果自己代码有修改，拉取远程仓库代码，则终止
+
+## head、main与branch
+- head是唯一的，可以指向commit，也可以指向branch
