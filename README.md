@@ -19,3 +19,7 @@
 
 ## head、main与branch
 - head是唯一的，可以指向commit，也可以指向branch
+- branch只是一个commit的引用
+  - git branch xxx  创建新分支
+  - git checkout xxx  切换分支
+  - git checkout -b xxx 合并上面两个操作
