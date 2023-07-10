@@ -1,6 +1,9 @@
 # 练习git
 - git clone 'xxx.git' 克隆远程仓库地址
   - 添加 .git目录，该目录是 本地仓库，.git所在的根目录是工作目录
+- git log 查看历史记录
+  - git log -p 查看详细的历史记录
+  - git log --stat 查看简要统计
 - git status 查看当前工作目录状态
   - 告知了当前所在分支
   - 和远程仓库相同分支是否有差距
@@ -16,6 +19,9 @@
 - git pull 拉取远程代码并合并
   - 相当于 git fetch + git merge 
   - 如果自己代码有修改，拉取远程仓库代码，则终止
+- git show commitID 查看某个具体commit的改动内容
+- git diff 查看未提交的内容
+  - git diff --staged 显示暂存区和上一条提交之间的不同
 
 ## head、main与branch
 - head是唯一的，可以指向commit，也可以指向branch
