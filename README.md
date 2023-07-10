@@ -36,3 +36,5 @@
 - git merge xxx 合并某个commit到当前commit中
 - git rebase xxx 将当前分支的提交在xxx中重新提交一遍
   - 之后要切回到xxx分支进行Merge，将xxx移到最新
+
+- git commit -amend 将当前commit和暂存区的内容合并创建一个新的commit，用这个新的commit 替换当前commit
