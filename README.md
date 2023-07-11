@@ -38,3 +38,6 @@
   - 之后要切回到xxx分支进行Merge，将xxx移到最新
 
 - git commit --amend 将当前commit和暂存区的内容合并创建一个新的commit，用这个新的commit 替换当前commit
+- git rebase -i 交互式rebase，可以指定要rebase的commit链中每一个commit是否需要进一步修改
+  - git rebase -i HEAD^^ ^的个数表示commit回溯的个数
+  - git rebase -i HEAD~number 表示commit回缩的number个数
