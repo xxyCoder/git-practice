@@ -14,4 +14,4 @@ aaa
 >>>>>>> c8560b93b7efb972f054ad287791107d31ed64f6
 
 测试一下rebase
-- 第一次提交 'version1'
+- 第一次提交 commit 'version1'
