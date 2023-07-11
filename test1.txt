@@ -5,3 +5,5 @@ test12
 测试一下rebase -i
 - commit 'rebase version1'
 - commit 'rebase version-2'
+
+第二次提交 'version2'
