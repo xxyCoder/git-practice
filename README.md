@@ -41,3 +41,6 @@
 - git rebase -i 交互式rebase，可以指定要rebase的commit链中每一个commit是否需要进一步修改
   - git rebase -i HEAD^^ ^的个数表示commit回溯的个数
   - git rebase -i HEAD~number 表示commit回缩的number个数
+
+- git reset --hard 丢弃最新提交
+  - git reset --hard HEAD^^
