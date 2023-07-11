@@ -6,4 +6,4 @@ test12
 - commit 'rebase version1'
 - commit 'rebase version-2'
 
-第二次提交 'version2'
+第二次提交
