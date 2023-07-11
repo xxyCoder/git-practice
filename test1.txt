@@ -1,3 +1,6 @@
 test12
 - 同事写的代码
 - 我写的代码，修补了错误代码
+
+测试一下rebase -i
+- commit 'rebase version1'
