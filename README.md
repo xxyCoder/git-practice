@@ -1,24 +1,40 @@
 # 练习git
 - git clone 'xxx.git' 克隆远程仓库地址
   - 添加 .git目录，该目录是 本地仓库，.git所在的根目录是工作目录
+  - git clone 'xxx.git' newName 指定新目录名称
+
+- git config 配置git，每次git提交都会使用到以下信息
+  - git config --global user.name xxx
+  - git config --global user.email xxx
+  - git config <key> 检查某一项
+
+- git init 初始化仓库，产生一个 .git子目录
+
 - git log 查看历史记录
   - git log -p 查看详细的历史记录
   - git log --stat 查看简要统计
-- git status 查看当前工作目录状态
+  
+- git status 查看当前工作目录哪些文件处于什么状态
   - 告知了当前所在分支
   - 和远程仓库相同分支是否有差距
   - 未跟踪的文件 
   - 已经跟踪但是后面又修改了 (前面使用 modified修饰)
   - 已经暂存文件 （前面使用 modified | new file 修饰）
     - 暂存区位于 .git目录下的index文件中
+
+- git diff 比较工作目录中当前文件和暂存区快照之间的差异
+- git diff --staged 比较已经暂存文件和最后一次提交的文件之间的差异  
+
 - git add 将未跟踪文件进行跟踪
 - git commit 将暂存区文件放入本地仓库
 - git push 提交到远程仓库
   - 两边都修改，然后push，后面push会失败
   - 这是因为git的push是使用了本地仓库的commit记录去添加的，如果远端仓库没有改本地commit则失败
+  
 - git pull 拉取远程代码并合并
   - 相当于 git fetch + git merge 
   - 如果自己代码有修改，拉取远程仓库代码，则终止
+  
 - git show commitID 查看某个具体commit的改动内容
 - git diff 查看未提交的内容
   - git diff --staged 显示暂存区和上一条提交之间的不同
@@ -44,3 +60,7 @@
 
 - git reset --hard 丢弃最新提交
   - git reset --hard HEAD^^
+
+
+# git知识点
+- git中所有的数据都存储前计算校验和（使用SHA-1计算内容作为哈希值），然后以校验和引用
