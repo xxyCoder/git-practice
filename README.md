@@ -7,6 +7,7 @@
   - git config --global user.name xxx
   - git config --global user.email xxx
   - git config <key> 检查某一项
+  - git config --global alias cmd 给cmd命令起别名
 
 - git init 初始化仓库，产生一个 .git子目录
 
@@ -64,6 +65,17 @@
 - git reset --hard 丢弃最新提交
   - git reset --hard HEAD^^
 
+- git reset HEAD xxx 取消xxx的暂存
+- git restore --staged xxx 取消xxx的暂存
+  - git restore xxx 取消在工作目录xxx文件的修改
+- git checkout -- xxx 取消在暂存区xxx文件的修改
+
+- git remote add xxx 添加远程仓库
+- git remote show xxx 查看某个远程仓库
+- git remote rename oldName newName 更改某个远程仓库的别名
+- git remote remove xxx 删除某个远程仓库
+
+- git fetch xxx 拉取远程仓库所没有的信息
 
 # git知识点
 - git中所有的数据都存储前计算校验和（使用SHA-1计算内容作为哈希值），然后以校验和引用
