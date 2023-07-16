@@ -54,6 +54,9 @@
     - 删除分支也只是删除引用commit的指针，不过一个commit不在任何一个branch的路径上，在一定时间之后会被git回收
 
 - git merge xxx 合并某个commit到当前commit中
+  - fast-forward ，当合并的分支是当前分支的直接后继
+  - 合并，当合并的分支不是当前分支的直接后继，会将合并的结果做一个commit，并指向它
+    - 使用 git status观察处于冲突且未合并的文件
 - git rebase xxx 将当前分支的提交在xxx中重新提交一遍
   - 之后要切回到xxx分支进行Merge，将xxx移到最新
 
