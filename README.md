@@ -52,6 +52,8 @@
   - git branch -d xxx 删除分支（当前Head不能指向被删除分支）
   - git branch -D xxx 强制删除，无论有无未push的代码
     - 删除分支也只是删除引用commit的指针，不过一个commit不在任何一个branch的路径上，在一定时间之后会被git回收
+  - git branch --merged 查看哪些已经合并到当前分支
+  - git branch --no-merged 查看哪些没有合并到当前分支
 
 - git merge xxx 合并某个commit到当前commit中
   - fast-forward ，当合并的分支是当前分支的直接后继
@@ -59,6 +61,7 @@
     - 使用 git status观察处于冲突且未合并的文件
 - git rebase xxx 将当前分支的提交在xxx中重新提交一遍
   - 之后要切回到xxx分支进行Merge，将xxx移到最新
+  - git rebase --onto x1 x2 x3 将x3中的commit除去x2中的commit，剩余的commit（即找到x3从x2开始分歧之后的commit）合并到x1中
 
 - git commit --amend 将当前commit和暂存区的内容合并创建一个新的commit，用这个新的commit 替换当前commit
 - git rebase -i 交互式rebase，可以指定要rebase的commit链中每一个commit是否需要进一步修改
@@ -73,10 +76,10 @@
   - git restore xxx 取消在工作目录xxx文件的修改
 - git checkout -- xxx 取消在暂存区xxx文件的修改
 
-- git remote add xxx 添加远程仓库
-- git remote show xxx 查看某个远程仓库
-- git remote rename oldName newName 更改某个远程仓库的别名
-- git remote remove xxx 删除某个远程仓库
+- git remote add 仓库名 xxx 添加远程仓库
+- git remote show 仓库名 xxx 查看某个远程仓库
+- git remote rename 仓库名 oldName newName 更改某个远程仓库的别名
+- git remote remove 仓库名 xxx 删除某个远程仓库
 
 - git fetch xxx 拉取远程仓库所没有的信息
 
