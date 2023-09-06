@@ -40,8 +40,6 @@
   - 如果自己代码有修改，拉取远程仓库代码，则终止
   
 - git show commitID 查看某个具体commit的改动内容
-- git diff 查看未提交的内容
-  - git diff --staged 显示暂存区和上一条提交之间的不同
 
 ## head、main与branch
 - head是唯一的，可以指向commit，也可以指向branch
