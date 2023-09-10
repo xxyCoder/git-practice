@@ -14,6 +14,7 @@
 - git log 查看历史记录
   - git log -p 查看详细的历史记录
   - git log --stat 查看简要统计
+  - git log --graph 查看各个分支之间关系
   
 - git status 查看当前工作目录哪些文件处于什么状态
   - 告知了当前所在分支
@@ -68,8 +69,8 @@
 
 - git reset --hard 丢弃最新提交
   - git reset --hard HEAD^^
-
 - git reset HEAD xxx 取消xxx的暂存
+- git revert HEAD 撤销提交
 - git restore --staged xxx 取消xxx的暂存
   - git restore xxx 取消在工作目录xxx文件的修改
 - git checkout -- xxx 取消在暂存区xxx文件的修改
