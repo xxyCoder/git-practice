@@ -69,8 +69,12 @@
 
 - git reset --hard 丢弃最新提交
   - git reset --hard HEAD^^
+  - git reset --soft 回退commit，修改的内容存储在暂存区
+  - git reset --mixed  回退commit，修改的内容存储在工作目录
+  - git reset --hard 清除
 - git reset HEAD xxx 取消xxx的暂存
 - git revert HEAD 撤销提交
+  - 使用新的commit来回滚所想要回滚的commit
 - git restore --staged xxx 取消xxx的暂存
   - git restore xxx 取消在工作目录xxx文件的修改
 - git checkout -- xxx 取消在暂存区xxx文件的修改
