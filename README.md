@@ -61,6 +61,14 @@
 - git rebase xxx 将当前分支的提交在xxx中重新提交一遍
   - 之后要切回到xxx分支进行Merge，将xxx移到最新
   - git rebase --onto x1 x2 x3 将x3中的commit除去x2中的commit，剩余的commit（即找到x3从x2开始分歧之后的commit）合并到x1中
+- git cherry-pick commid|brancName 将指定的commit或其他分支的最新提交应用于当前分支
+  - -e --edit 打开外部编辑器，编辑提交信息
+  - -n --no-commit  只更新工作区和暂存区，不产生新的提交
+  - -x  添加注释
+  - 产生冲突并解决之后 
+    - 将修改的文件添入暂存区， 然后继续执行(git cherry-pick --continue)
+    - --abort 发生冲突后，放弃合并
+    - --quit  发生冲突后，退出cherry-pick，但是不回到操作之前的样子
 
 - git commit --amend 将当前commit和暂存区的内容合并创建一个新的commit，用这个新的commit 替换当前commit
 - git rebase -i 交互式rebase，可以指定要rebase的commit链中每一个commit是否需要进一步修改
