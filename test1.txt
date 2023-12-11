@@ -5,7 +5,7 @@ test12
 测试一下rebase -i
 - commit 'rebase version1'
 - commit 'rebase version-2'
-1
+
 第二次提交
 第二次提交123
 3333
