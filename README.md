@@ -85,7 +85,6 @@
   - 使用新的commit来回滚所想要回滚的commit
 - git restore --staged xxx 取消xxx的暂存
   - git restore xxx 取消在工作目录xxx文件的修改
-- git checkout -- xxx 取消在暂存区xxx文件的修改
 
 - git remote add 仓库名 xxx 添加远程仓库
 - git remote show 仓库名 xxx 查看某个远程仓库
@@ -93,6 +92,36 @@
 - git remote remove 仓库名 xxx 删除某个远程仓库
 
 - git fetch xxx 拉取远程仓库所没有的信息
+
+# 撤销
+## 撤销已经修改但是未暂存
+- git checkout -- <filename>
+- git checkout . 全部
+- git restore <filename>
+
+## 已经暂存，未提交，将暂存区内容还原到工作区
+- git reset head 全部
+- git reset head -- <filename> 
+- git restore --staged <filename>
+
+## 已提交，未推送
+- git reset head^ 将提交的还原到工作区
+- git reset <commit-id> 将提交还原到工作区
+- git reset --soft head 将推送还原到暂存区
+- git revert <commit-id> 生成一个新的commit，在将指定的commit内容从分支中删除（不会回到暂存区也不会回到工作区）
+
+## 将提交、暂存的、修改的全部清空
+- git reset --hard head
+- git reset --hard <commit-id>
+
+## 已经推送
+- 回滚本地仓库，强制推送覆盖远程仓库
+1. 
+  - git reset --soft head^
+  - git push --force
+2.
+  - git revert head
+  - git push
 
 # git知识点
 - git中所有的数据都存储前计算校验和（使用SHA-1计算内容作为哈希值），然后以校验和引用
