@@ -75,17 +75,6 @@
   - git rebase -i HEAD^^ ^的个数表示commit回溯的个数
   - git rebase -i HEAD~number 表示commit回缩的number个数
 
-- git reset --hard 丢弃最新提交
-  - git reset --hard HEAD^^
-  - git reset --soft 回退commit，修改的内容存储在暂存区
-  - git reset --mixed  回退commit，修改的内容存储在工作目录
-  - git reset --hard 清除
-- git reset HEAD xxx 取消xxx的暂存
-- git revert HEAD 撤销提交
-  - 使用新的commit来回滚所想要回滚的commit
-- git restore --staged xxx 取消xxx的暂存
-  - git restore xxx 取消在工作目录xxx文件的修改
-
 - git remote add 仓库名 xxx 添加远程仓库
 - git remote show 仓库名 xxx 查看某个远程仓库
 - git remote rename 仓库名 oldName newName 更改某个远程仓库的别名
@@ -122,6 +111,17 @@
 2.
   - git revert head
   - git push
+
+## 撤销 撤销修改
+- git reflog 查看撤销之前的commit id
+- git reset <commit-id>即可
+- 不过要尽快，赶在git清理commit-id之前还可以找回
+
+# 合并分支
+- git merge <branch-name> 将指定分支合并到当前分支  
+  - 合并是新增一个commid，将两个分支联系起来
+- git rebase <branch-name> 将当前分支移到指定分支或commid-id
+  - 会将整个分支移动到另一个分支
 
 # git知识点
 - git中所有的数据都存储前计算校验和（使用SHA-1计算内容作为哈希值），然后以校验和引用
