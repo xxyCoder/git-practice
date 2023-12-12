@@ -12,7 +12,7 @@ test2
 >>>>>>> 6d26338159108e56d25de20bf8c53724fd5ea499
 aaa
 >>>>>>> c8560b93b7efb972f054ad287791107d31ed64f6
-
+dev新增代码
 测试一下rebase
 - 第一次提交 commit 'version1'
 
