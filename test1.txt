@@ -6,6 +6,7 @@ test12
 - commit 'rebase version1'
 - commit 'rebase version-2'
 
+修改后1
 第二次提交
 第二次提交123
 3333
@@ -16,3 +17,5 @@ test12
 什么？还能取消暂存？
 做个冲突
 比你先
+
+chore: test1
