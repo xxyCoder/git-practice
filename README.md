@@ -24,9 +24,13 @@
   - 已经暂存文件 （前面使用 modified | new file 修饰）
     - 暂存区位于 .git目录下的index文件中
 
-- git diff 比较工作目录中当前文件和暂存区快照之间的差异
+# 对比文件差异（基于同一个文件对比）
+- git diff 工作区有改动，但暂存区没有，则与最后一次commit-id做对比；如果暂存区有东西，则与暂存区进行对比
 - git diff --staged 比较已经暂存文件和最后一次提交的文件之间的差异  
-
+- git diff head 显示工作区和暂存区与最后一次commid-id之间所有不相同文件的修改
+- git diff <commit-id2> <commit-id2> 比较两个commid-id之间的差异
+- git diff <branch-name1> <branch-name2> 比较两个分支最后的commit内容差别
+ 
 - git add 将未跟踪文件进行跟踪
 - git commit 将暂存区文件放入本地仓库
 - git rm 将暂存区中文件移除，连带从工作区中也移除
