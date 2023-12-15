@@ -127,5 +127,9 @@
 - git rebase <branch-name> 将当前分支移到指定分支或commid-id
   - 会将整个分支移动到另一个分支
 
+# 拉取远程分支代码
+- 修改后要先commit之后才能git pull，有冲突解决冲突后然后再次commit
+- 推荐先git pull后再修改代码
+
 # git知识点
 - git中所有的数据都存储前计算校验和（使用SHA-1计算内容作为哈希值），然后以校验和引用
